@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import uk.co.wowcher.cashback.bean.Category;
 import uk.co.wowcher.cashback.service.adapter.impl.SampleAdapter;
 
-@Component("service")
+@Component("serviceSample")
 public class SampleService {
 
 	@Autowired

@@ -11,7 +11,7 @@ import uk.co.wowcher.cashback.bean.Category;
 import uk.co.wowcher.cashback.persistence.dao.SampleDao;
 import uk.co.wowcher.cashback.service.impl.SampleService;
 
-@Component("adapter")
+@Component("adapterservice")
 public class SampleAdapter {
 
 	
@@ -27,9 +27,9 @@ public class SampleAdapter {
 	{
 		System.out.println("In adapter class");
 		
-		domainCategory.setiCategoryId(category.getICategoryId());
-		domainCategory.setsName(category.getSName());
-		domainCategory.setsDescription(category.getSDescription());
+		domainCategory.setiCategoryId(category.getiCategoryId());
+		domainCategory.setsName(category.getsName());
+		domainCategory.setsDescription(category.getsDescription());
 		
 		
 		
@@ -40,9 +40,9 @@ public class SampleAdapter {
 		for(uk.co.wowcher.cashback.domain.beans.Category categoryDomain:lstCategory)
 		{
 			category2 = new Category();
-			category2.setICategoryId(categoryDomain.getiCategoryId());
-			category2.setSDescription(categoryDomain.getsDescription());
-			category2.setSName(categoryDomain.getsName());
+			category2.setiCategoryId(categoryDomain.getiCategoryId());
+			category2.setsDescription(categoryDomain.getsDescription());
+			category2.setsName(categoryDomain.getsName());
 			lstCategories.add(category2);
 		}
 		

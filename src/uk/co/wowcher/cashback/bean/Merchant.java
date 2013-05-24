@@ -1,90 +1,178 @@
 package uk.co.wowcher.cashback.bean;
 
-import java.util.List;
+
+
+
 
 public class Merchant {
+	
+	
 	private int iMerchantId;
+
 	private String sName;
+
 	private int iMerchantCode;
+
 	private String sUrl;
+
 	private String sDescription;
+
 	private String sLogoUrl;
+
 	private String sTerms;
+
 	private boolean bIsActive;
+
 	private boolean bIsExclusive;
-	private TrackingStats oTrackingStats;
+
 	private String sTermsAndConditions;
-	private List<MerchantDeal> merchantDeals;
-	public List<MerchantDeal> getMerchantDeals() {
-		return merchantDeals;
+
+	private boolean bIsSpecialBonusAvailable;
+
+	private float sSpecialBonus;
+
+	private boolean bdeletedFlag;
+	
+	private int iSortOrder;
+	
+	private TrackingStats oTrackingStates;
+	
+	
+
+	public TrackingStats getoTrackingStates() {
+		return oTrackingStates;
 	}
-	public void setMerchantDeals(List<MerchantDeal> merchantDeals) {
-		this.merchantDeals = merchantDeals;
+
+	public void setoTrackingStates(TrackingStats oTrackingStates) {
+		this.oTrackingStates = oTrackingStates;
 	}
-	public int getIMerchantId() {
+
+	public int getiSortOrder() {
+		return iSortOrder;
+	}
+
+	public void setiSortOrder(int iSortOrder) {
+		this.iSortOrder = iSortOrder;
+	}
+
+	public int getiMerchantId() {
 		return iMerchantId;
 	}
-	public void setIMerchantId(int merchantId) {
-		iMerchantId = merchantId;
+
+	public void setiMerchantId(int iMerchantId) {
+		this.iMerchantId = iMerchantId;
 	}
-	public String getSName() {
+
+	public String getsName() {
 		return sName;
 	}
-	public void setSName(String name) {
-		sName = name;
+
+	public void setsName(String sName) {
+		this.sName = sName;
 	}
-	public int getIMerchantCode() {
+
+	public int getiMerchantCode() {
 		return iMerchantCode;
 	}
-	public void setIMerchantCode(int merchantCode) {
-		iMerchantCode = merchantCode;
+
+	public void setiMerchantCode(int iMerchantCode) {
+		this.iMerchantCode = iMerchantCode;
 	}
-	public String getSUrl() {
+
+	public String getsUrl() {
 		return sUrl;
 	}
-	public void setSUrl(String url) {
-		sUrl = url;
+
+	public void setsUrl(String sUrl) {
+		this.sUrl = sUrl;
 	}
-	public String getSDescription() {
+
+	public String getsDescription() {
 		return sDescription;
 	}
-	public void setSDescription(String description) {
-		sDescription = description;
+
+	public void setsDescription(String sDescription) {
+		this.sDescription = sDescription;
 	}
-	public String getSLogoUrl() {
+
+	public String getsLogoUrl() {
 		return sLogoUrl;
 	}
-	public void setSLogoUrl(String logoUrl) {
-		sLogoUrl = logoUrl;
+
+	public void setsLogoUrl(String sLogoUrl) {
+		this.sLogoUrl = sLogoUrl;
 	}
-	public String getSTerms() {
+
+	public String getsTerms() {
 		return sTerms;
 	}
-	public void setSTerms(String terms) {
-		sTerms = terms;
+
+	public void setsTerms(String sTerms) {
+		this.sTerms = sTerms;
 	}
-	public boolean isBIsActive() {
+
+	public boolean isbIsActive() {
 		return bIsActive;
 	}
-	public void setBIsActive(boolean isActive) {
-		bIsActive = isActive;
+
+	public void setbIsActive(boolean bIsActive) {
+		this.bIsActive = bIsActive;
 	}
-	public boolean isBIsExclusive() {
+
+	public boolean isbIsExclusive() {
 		return bIsExclusive;
 	}
-	public void setBIsExclusive(boolean isExclusive) {
-		bIsExclusive = isExclusive;
+
+	public void setbIsExclusive(boolean bIsExclusive) {
+		this.bIsExclusive = bIsExclusive;
 	}
-	public TrackingStats getOTrackingStats() {
-		return oTrackingStats;
-	}
-	public void setOTrackingStats(TrackingStats trackingStats) {
-		oTrackingStats = trackingStats;
-	}
-	public String getSTermsAndConditions() {
+
+	public String getsTermsAndConditions() {
 		return sTermsAndConditions;
 	}
-	public void setSTermsAndConditions(String termsAndConditions) {
-		sTermsAndConditions = termsAndConditions;
+
+	public void setsTermsAndConditions(String sTermsAndConditions) {
+		this.sTermsAndConditions = sTermsAndConditions;
 	}
+
+	public boolean isbIsSpecialBonusAvailable() {
+		return bIsSpecialBonusAvailable;
+	}
+
+	public void setbIsSpecialBonusAvailable(boolean bIsSpecialBonusAvailable) {
+		this.bIsSpecialBonusAvailable = bIsSpecialBonusAvailable;
+	}
+
+	public float getsSpecialBonus() {
+		return sSpecialBonus;
+	}
+
+	public void setsSpecialBonus(float sSpecialBonus) {
+		this.sSpecialBonus = sSpecialBonus;
+	}
+
+	public boolean isBdeletedFlag() {
+		return bdeletedFlag;
+	}
+
+	public void setBdeletedFlag(boolean bdeletedFlag) {
+		this.bdeletedFlag = bdeletedFlag;
+	}
+
+	@Override
+	public String toString() {
+		return "Merchant [iMerchantId=" + iMerchantId + ", sName=" + sName
+				+ ", iMerchantCode=" + iMerchantCode + ", sUrl=" + sUrl
+				+ ", sDescription=" + sDescription + ", sLogoUrl=" + sLogoUrl
+				+ ", sTerms=" + sTerms + ", bIsActive=" + bIsActive
+				+ ", bIsExclusive=" + bIsExclusive + ", sTermsAndConditions="
+				+ sTermsAndConditions + ", bIsSpecialBonusAvailable="
+				+ bIsSpecialBonusAvailable + ", sSpecialBonus=" + sSpecialBonus
+				+ "]";
+	}
+	
+	
+
+
+
 }

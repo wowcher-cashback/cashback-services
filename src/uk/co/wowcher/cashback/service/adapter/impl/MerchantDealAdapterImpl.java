@@ -33,7 +33,7 @@ public class MerchantDealAdapterImpl implements MerchantDealAdapter {
 		
 		domainCommissionGroup.setsCommissionGroupCode(merchantDeal.getOCommissionGroup().getSCommissionGroupCode());
 		MerchantDealType merchantDealType = new MerchantDealType();
-		domainMerchant.setiMerchantId(merchantDeal.getMerchant().getIMerchantId());
+		domainMerchant.setiMerchantId(merchantDeal.getMerchant().getiMerchantId());
 		merchantDealType.setiMerchantDealTypeId(merchantDeal.getOMerchantDealType().getIMerchantDealTypeId());
 		domainMerchantDeal.setMerchant(domainMerchant);
 		domainMerchantDeal.setoMerchantDealType(merchantDealType);
@@ -55,7 +55,7 @@ public class MerchantDealAdapterImpl implements MerchantDealAdapter {
 	
 	public List<MerchantDeal> getMerchantDeals(Merchant merchant,String merchantDealType_name)
 	{
-		domainMerchant.setiMerchantId(merchant.getIMerchantId());
+		domainMerchant.setiMerchantId(merchant.getiMerchantId());
 		List<uk.co.wowcher.cashback.domain.beans.MerchantDeal> lstMerchantDeals = merchantDealDao.getMerchantDeals(domainMerchant, merchantDealType_name);
 		List<MerchantDeal> lstUiMerchantDeals = new ArrayList<MerchantDeal>();
 		MerchantDeal uiMerchantDeal = null;
@@ -109,7 +109,7 @@ public class MerchantDealAdapterImpl implements MerchantDealAdapter {
 		merchantDeal.setIMerchantDealId(deal.getiMerchantDealId());
 		merchantDeal.setIProductId(deal.getiProductId());
 		
-		merchant.setIMerchantId(deal.getMerchant().getiMerchantId());
+		merchant.setiMerchantId(deal.getMerchant().getiMerchantId());
 		merchantDeal.setMerchant(merchant);
 		
 		merchantDeal.setSDescription(deal.getsDescription());
